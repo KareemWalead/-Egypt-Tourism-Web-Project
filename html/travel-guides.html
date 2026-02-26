@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <title>مرشدي السفر - أكتشف سحر مصر</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="مرشدو سفر محترفين, جولات سياحية, مرشدين سياحيين معتمدين" name="keywords">
+    <meta content="تعرف على فريق مرشدينا السياحيين المحترفين الذين سيرافقونكم في رحلاتكم لاكتشاف سحر مصر" name="description">
+
+    <!-- Favicon -->
+    <link href="../img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../css/travel-guides.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/rtl.css">
+    
+    <style>
+        .guide-header {
+            background: linear-gradient(135deg, #00796b 0%, #00897b 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <script>
+        // إخفاء Spinner عند تحميل الصفحة
+        window.addEventListener('load', function() {
+            const spinner = document.getElementById('spinner');
+            if (spinner) {
+                spinner.classList.remove('show');
+            }
+        });
+    </script>
+
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+               <h1 class="hamshary m-0"><i class="fa fa-map-marker-alt me-3"></i>أكتشف سحر مصر</h1>
+
+                <!-- <img src="img/logo.png" alt="Logo"> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="../index.html" class="nav-item nav-link active">الرئيسية</a>
+                    <a href="about.html" class="nav-item nav-link">من نحن</a>
+                    <a href="service.html" class="nav-item nav-link">الخدمات</a>
+                   <a href="package.html" class="nav-item nav-link">الباقات</a>
+                   <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">الصفحات</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="works.html" class="dropdown-item">الوجهات</a>
+                            <a href="booking.html" class="dropdown-item">الحجز</a>
+                            <a href="team.html" class="dropdown-item">مرشدي السفر</a>
+                            
+                            <a href="advise.html" class="dropdown-item">نصائح للسفر</a>
+							 <a href="../ahram/ahram.html" class="dropdown-item">بانوراما</a>
+                              <a href="../Egyption-Tourism/meusem.html" class="dropdown-item">المتحف المصري</a>
+                        </div>
+                  </div>
+                   <a href="contact.html" class="nav-item nav-link">اتصل بنا</a>
+				  </div>
+                  <a href="../php/login.php" class="btn btn-primary rounded-pill py-2 px-4">لوحة التحكم</a>
+            </div>
+        </nav>
+
+        <!-- Hero Header -->
+        <div class="container-fluid bg-primary py-5 mb-5 guide-header" >
+            <div class="container py-5 ">
+                <div class="row justify-content-center py-5">
+                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                        <h1 class="display-3 text-white animated slideInDown">مرشدو السفر المحترفين</h1>
+                        <p class="fs-5 text-white mb-4 pb-2">فريق من الخبراء والمتخصصين ليرافقوك في رحلتك لاكتشاف عجائب مصر</p>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                                <li class="breadcrumb-item"><a href="service.html">الخدمات</a></li>
+                                <li class="breadcrumb-item text-white active" aria-current="page">مرشدي السفر</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Travel Guides Section Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">فريقنا</h6>
+                <h1 class="mb-1 dark-text">مرشدونا السياحيون</h1>
+                <p class="mb-5">نختار بعناية فريقنا من المرشدين المؤهلين والمعتمدين لضمان رحلة آمنة وممتعة</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons wow fadeInUp" data-wow-delay="0.2s">
+                <button class="filter-btn active" data-filter="all">الجميع</button>
+                <button class="filter-btn" data-filter="historical">المرشدون التاريخيون</button>
+                <button class="filter-btn" data-filter="adventure">مرشدو المغامرات</button>
+                <button class="filter-btn" data-filter="cultural">المرشدون الثقافيون</button>
+                <button class="filter-btn" data-filter="family">مرشدو الرحلات العائلية</button>
+            </div>
+
+            <!-- Guides Grid -->
+            <div class="row g-4 guide-container">
+                <!-- Guide 1 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" data-category="historical">
+                    <div class="guide-card position-relative">
+                        <span class="experience-badge">+15 سنة خبرة</span>
+                        <img class="guide-img" src="../img/team-3.jpg" alt="د. أحمد السيد - مرشد تاريخي">
+                        <div class="guide-info">
+                            <h4 class="mb-2">د. أحمد السيد</h4>
+                            <p class="text-muted mb-2"><i class="fa fa-graduation-cap text-primary me-2"></i>دكتوراه في الآثار المصرية</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-muted">(4.8)</span>
+                            </div>
+                            <p class="mb-3">مرشد سياحي معتمد بخبرة تزيد عن 15 سنة في المجال السياحي، متخصص في الآثار المصرية والتاريخ الفرعوني.</p>
+                            
+                            <div class="mb-3">
+                                <strong class="d-block mb-2">اللغات:</strong>
+                                <div>
+                                    <span class="language-badge">العربية</span>
+                                    <span class="language-badge">الإنجليزية</span>
+                                    <span class="language-badge">الفرنسية</span>
+                                </div>
+                            </div>
+                            
+                            <div class="guide-specialties">
+                                <span class="specialty-badge">الأهرامات</span>
+                                <span class="specialty-badge">المتاحف</span>
+                                <span class="specialty-badge">المعابد</span>
+                            </div>
+                            
+                            <button class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#guideModal1">عرض الملف الشخصي</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guide 2 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s" data-category="adventure">
+                    <div class="guide-card position-relative">
+                        <span class="experience-badge">+12 سنة خبرة</span>
+                        <img class="guide-img" src="../img/testimonial-2.jpg" alt="محمد عبد الرحمن - مرشد مغامرات">
+                        <div class="guide-info">
+                            <h4 class="mb-2">محمد عبد الرحمن</h4>
+                            <p class="text-muted mb-2"><i class="fa fa-map text-primary me-2"></i>مرشد سياحي ومتسلق جبال</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-muted">(5.0)</span>
+                            </div>
+                            <p class="mb-3">متخصص في رحلات السفاري والمغامرات في الصحراء، حاصل على شهادات في الإنقاذ والإسعافات الأولية.</p>
+                            
+                            <div class="mb-3">
+                                <strong class="d-block mb-2">اللغات:</strong>
+                                <div>
+                                    <span class="language-badge">العربية</span>
+                                    <span class="language-badge">الإنجليزية</span>
+                                    <span class="language-badge">الألمانية</span>
+                                </div>
+                            </div>
+                            
+                            <div class="guide-specialties">
+                                <span class="specialty-badge">رحلات الصحراء</span>
+                                <span class="specialty-badge">الغوص</span>
+                                <span class="specialty-badge">تسلق الجبال</span>
+                            </div>
+                            
+                            <button class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#guideModal2">عرض الملف الشخصي</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guide 3 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s" data-category="cultural">
+                    <div class="guide-card position-relative">
+                        <span class="experience-badge">+10 سنوات خبرة</span>
+                        <img class="guide-img" src="../img/guide-3.jpg" alt="سارة محمود - مرشدة ثقافية">
+                        <div class="guide-info">
+                            <h4 class="mb-2">سارة محمود</h4>
+                            <p class="text-muted mb-2"><i class="fa fa-book text-primary me-2"></i>ماجستير في التراث الشعبي</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-muted">(5.0)</span>
+                            </div>
+                            <p class="mb-3">متخصصة في الجولات الثقافية والتراثية، تعرفك على الحياة المصرية التقليدية والفنون الشعبية.</p>
+                            
+                            <div class="mb-3">
+                                <strong class="d-block mb-2">اللغات:</strong>
+                                <div>
+                                    <span class="language-badge">العربية</span>
+                                    <span class="language-badge">الإنجليزية</span>
+                                    <span class="language-badge">الإسبانية</span>
+                                    <span class="language-badge">الإيطالية</span>
+                                </div>
+                            </div>
+                            
+                            <div class="guide-specialties">
+                                <span class="specialty-badge">الحرف اليدوية</span>
+                                <span class="specialty-badge">المطبخ المصري</span>
+                                <span class="specialty-badge">الأسواق الشعبية</span>
+                            </div>
+                            
+                            <button class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#guideModal3">عرض الملف الشخصي</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guide 4 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s" data-category="family">
+                    <div class="guide-card position-relative">
+                        <span class="experience-badge">+8 سنوات خبرة</span>
+                        <img class="guide-img" src="../img/guide-4.jpg" alt="ليلى حسن - مرشدة عائلية">
+                        <div class="guide-info">
+                            <h4 class="mb-2">ليلى حسن</h4>
+                            <p class="text-muted mb-2"><i class="fa fa-users text-primary me-2"></i>متخصصة في الرحلات العائلية</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-muted">(4.9)</span>
+                            </div>
+                            <p class="mb-3">متخصصة في تنظيم الرحلات العائلية للأطفال والكبار، تضمن رحلة آمنة وممتعة للجميع.</p>
+                            
+                            <div class="mb-3">
+                                <strong class="d-block mb-2">اللغات:</strong>
+                                <div>
+                                    <span class="language-badge">العربية</span>
+                                    <span class="language-badge">الإنجليزية</span>
+                                    <span class="language-badge">الفرنسية</span>
+                                </div>
+                            </div>
+                            
+                            <div class="guide-specialties">
+                                <span class="specialty-badge">رحلات الأطفال</span>
+                                <span class="specialty-badge">الأنشطة التعليمية</span>
+                                <span class="specialty-badge">الترفيه العائلي</span>
+                            </div>
+                            
+                            <button class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#guideModal4">عرض الملف الشخصي</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guide 5 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s" data-category="historical">
+                    <div class="guide-card position-relative">
+                        <span class="experience-badge">+18 سنة خبرة</span>
+                        <img class="guide-img" src="../img/guide-5.jpg" alt="د. خالد إبراهيم - مرشد آثار">
+                        <div class="guide-info">
+                            <h4 class="mb-2">د. خالد إبراهيم</h4>
+                            <p class="text-muted mb-2"><i class="fa fa-university text-primary me-2"></i>أستاذ الآثار بجامعة القاهرة</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-muted">(5.0)</span>
+                            </div>
+                            <p class="mb-3">خبير في الآثار المصرية القديمة، شارك في العديد من البعثات الأثرية ونشر أبحاث في مجلات عالمية.</p>
+                            
+                            <div class="mb-3">
+                                <strong class="d-block mb-2">اللغات:</strong>
+                                <div>
+                                    <span class="language-badge">العربية</span>
+                                    <span class="language-badge">الإنجليزية</span>
+                                    <span class="language-badge">الألمانية</span>
+                                    <span class="language-badge">اليابانية</span>
+                                </div>
+                            </div>
+                            
+                            <div class="guide-specialties">
+                                <span class="specialty-badge">المقابر الملكية</span>
+                                <span class="specialty-badge">المعابد الفرعونية</span>
+                                <span class="specialty-badge">الكتابات الهيروغليفية</span>
+                            </div>
+                            
+                            <button class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#guideModal5">عرض الملف الشخصي</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guide 6 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s" data-category="adventure">
+                    <div class="guide-card position-relative">
+                        <span class="experience-badge">+14 سنة خبرة</span>
+                        <img class="guide-img" src="../img/guide-6.jpg" alt="عمر سعيد - مرشد غوص">
+                        <div class="guide-info">
+                            <h4 class="mb-2">عمر سعيد</h4>
+                            <p class="text-muted mb-2"><i class="fa fa-water text-primary me-2"></i>مدرب غوص دولي معتمد</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-muted">(4.9)</span>
+                            </div>
+                            <p class="mb-3">متخصص في رحلات الغوص في البحر الأحمر، حاصل على شهادات PADI الدولية، يعرف أفضل مواقع الغوص.</p>
+                            
+                            <div class="mb-3">
+                                <strong class="d-block mb-2">اللغات:</strong>
+                                <div>
+                                    <span class="language-badge">العربية</span>
+                                    <span class="language-badge">الإنجليزية</span>
+                                    <span class="language-badge">الروسية</span>
+                                </div>
+                            </div>
+                            
+                            <div class="guide-specialties">
+                                <span class="specialty-badge">الغوص الحر</span>
+                                <span class="specialty-badge">رحلات القوارب</span>
+                                <span class="specialty-badge">تصوير تحت الماء</span>
+                            </div>
+                            
+                            <button class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#guideModal6">عرض الملف الشخصي</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Travel Guides Section End -->
+
+    <!-- Why Choose Our Guides Section Start -->
+    <div class="container-xxl py-5" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-transparent text-center text-primary px-3">لماذا تختار مرشدينا؟</h6>
+                <h1 class="mb-5">مزايا فريقنا</h1>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="text-center p-4 border rounded bg-white">
+                        <i class="fa fa-3x fa-certificate text-primary mb-3"></i>
+                        <h5 class="mb-3">معتمدون رسمياً</h5>
+                        <p>جميع مرشدينا حاصلون على شهادات معتمدة من وزارة السياحة المصرية</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="text-center p-4 border rounded bg-white">
+                        <i class="fa fa-3x fa-comments text-primary mb-3"></i>
+                        <h5 class="mb-3">متعددي اللغات</h5>
+                        <p>يتحدث فريقنا عدة لغات عالمية لتلبية احتياجات جميع الزوار</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="text-center p-4 border rounded bg-white">
+                        <i class="fa fa-3x fa-award text-primary mb-3"></i>
+                        <h5 class="mb-3">خبرة واسعة</h5>
+                        <p>متوسط خبرة مرشدينا تزيد عن 10 سنوات في المجال السياحي</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="text-center p-4 border rounded bg-white">
+                        <i class="fa fa-3x fa-heart text-primary mb-3"></i>
+                        <h5 class="mb-3">التعاطف والاهتمام</h5>
+                        <p>فريقنا يهتم بتجربتك ويحرص على راحتك واستمتاعك</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Why Choose Our Guides Section End -->
+
+    <!-- Booking CTA Section Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="bg-light p-5 rounded">
+                <h2 class="mb-4">احجز مرشدك السياحي الآن</h2>
+                <p class="mb-4">اختر المرشد المناسب لرحلتك واستمتع بتجربة سياحية استثنائية مع خبير يعرف كل أسرار مصر</p>
+                <a href="booking.html" class="btn btn-primary py-3 px-5">احجز مرشد سياحي</a>
+            </div>
+        </div>
+    </div>
+    <!-- Booking CTA Section End -->
+
+    <!-- Guide Modals -->
+    <!-- Modal for Guide 1 -->
+    <div class="modal fade" id="guideModal1" tabindex="-1" aria-labelledby="guideModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content modal-arabic">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="guideModal1Label">الملف الشخصي: د. أحمد السيد</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../img/team-3.jpg" alt="د. أحمد السيد" class="guide-modal-img">
+                    <h4 class="text-center mb-3">د. أحمد السيد</h4>
+                    <p class="text-center text-muted mb-4">مرشد سياحي معتمد - متخصص في الآثار المصرية</p>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h6><i class="fa fa-user-graduate text-primary me-2"></i>المؤهلات:</h6>
+                            <ul>
+                                <li>دكتوراه في الآثار المصرية القديمة</li>
+                                <li>ماجستير في تاريخ الحضارات</li>
+                                <li>شهادة مرشد سياحي معتمد</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6><i class="fa fa-language text-primary me-2"></i>اللغات:</h6>
+                            <p>العربية (اللغة الأم)، الإنجليزية (متقن)، الفرنسية (جيد جداً)</p>
+                        </div>
+                    </div>
+                    
+                    <h6><i class="fa fa-briefcase text-primary me-2"></i>الخبرات:</h6>
+                    <p>عمل مرشداً سياحياً لأكثر من 15 عاماً، قاد جولات لأكثر من 500 مجموعة سياحية من مختلف أنحاء العالم، شارك في إعداد برامج وثائقية عن الآثار المصرية.</p>
+                    
+                    <h6><i class="fa fa-map-marker-alt text-primary me-2"></i>المناطق المتخصص فيها:</h6>
+                    <p>أهرامات الجيزة، المتحف المصري، الأقصر وأسوان، معبد أبو سمبل، وادي الملوك، معابد الكرنك</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                    <a href="booking.html" class="btn btn-primary">احجز مع هذا المرشد</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal for Guide 2 -->
+    <div class="modal fade" id="guideModal2" tabindex="-1" aria-labelledby="guideModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content modal-arabic">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="guideModal2Label">الملف الشخصي: د. أحمد السيد</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../img/testimonial-2.jpg" alt="د. أحمد السيد" class="guide-modal-img">
+                    <h4 class="text-center mb-3">د. أحمد السيد</h4>
+                    <p class="text-center text-muted mb-4">مرشد سياحي معتمد - متخصص في الآثار المصرية</p>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h6><i class="fa fa-user-graduate text-primary me-2"></i>المؤهلات:</h6>
+                            <ul>
+                                <li>دكتوراه في الآثار المصرية القديمة</li>
+                                <li>ماجستير في تاريخ الحضارات</li>
+                                <li>شهادة مرشد سياحي معتمد</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6><i class="fa fa-language text-primary me-2"></i>اللغات:</h6>
+                            <p>العربية (اللغة الأم)، الإنجليزية (متقن)، الفرنسية (جيد جداً)</p>
+                        </div>
+                    </div>
+                    
+                    <h6><i class="fa fa-briefcase text-primary me-2"></i>الخبرات:</h6>
+                    <p>عمل مرشداً سياحياً لأكثر من 15 عاماً، قاد جولات لأكثر من 500 مجموعة سياحية من مختلف أنحاء العالم، شارك في إعداد برامج وثائقية عن الآثار المصرية.</p>
+                    
+                    <h6><i class="fa fa-map-marker-alt text-primary me-2"></i>المناطق المتخصص فيها:</h6>
+                    <p>أهرامات الجيزة، المتحف المصري، الأقصر وأسوان، معبد أبو سمبل، وادي الملوك، معابد الكرنك</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                    <a href="booking.html" class="btn btn-primary">احجز مع هذا المرشد</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add similar modals for other guides (guideModal2 to guideModal6) -->
+    <!-- You can copy the structure above and change the content for each guide -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">الشركة</h4>
+                    <a class="btn btn-link" href="about.html">من نحن</a>
+                    <a class="btn btn-link" href="contact.html">اتصل بنا</a>
+                    <a class="btn btn-link" href="#">سياسة الخصوصية</a>
+                    <a class="btn btn-link" href="#">الشروط والأحكام</a>
+                    <a class="btn btn-link" href="#">الأسئلة الشائعة</a>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">اتصل بنا</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>القاهرة، مصر</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+20 123 456 7890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@discoveregypt.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">روابط سريعة</h4>
+                    <a class="btn btn-link" href="index.html">الرئيسية</a>
+                    <a class="btn btn-link" href="destination.html">الوجهات</a>
+                    <a class="btn btn-link" href="package.html">الباقات</a>
+                    <a class="btn btn-link" href="travel-guides.html">مرشدي السفر</a>
+                    <a class="btn btn-link" href="booking.html">الحجز</a>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">النشرة الإخبارية</h4>
+                    <p>اشترك لتصلك آخر العروض والجولات الجديدة</p>
+                    <div class="position-relative mx-auto">
+                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="بريدك الإلكتروني">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">اشترك</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+
+    
+    <!-- Template Javascript -->
+    <script src="../js/travel-guides.js"></script>
+</body>
+</html>

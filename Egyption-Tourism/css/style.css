@@ -1,0 +1,452 @@
+/* عام */
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    /* deeper, opulent background with gold tone hint */
+    background: linear-gradient(145deg,#1a1717 0%,#3c2f21 60%,#73613c 100%);
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* make main sections stand out as white cards */
+.section,
+.about,
+.highlights,
+.gallery,
+.visit,
+.cta {
+    background: #ffffff77;
+    border-radius: 8px;
+    margin: 40px auto;
+    padding: 80px 6%;
+    max-width: 1200px;
+}
+
+/* override the previous .section padding rule which is now included above */
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background: #2c3e50;
+    color: rgb(255, 204, 0);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+header h1 {
+    text-align: center;
+    margin: 0;
+}
+nav {
+    text-align: center;
+    margin-top: 10px;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a.active {
+    color: #e67e22;
+}
+
+/* Hero */
+.hero {
+    background: url('../imges/michael.jpg') no-repeat center center/cover;
+    height:100%;
+    position: relative;
+}
+.hero .overlay {
+    /* background: rgba(0,0,0,0.5); */
+    min-height: 60vh;
+    padding: 5vh 2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero .btn {
+    background: #e67e22;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.hero .btn:hover {
+    background: #d35400;
+}
+
+/* About */
+.about img {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Highlights */
+.highlights .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Gallery */
+.gallery .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Visit */
+.visit button {
+    background: #2c3e50;
+    color: #e67e22;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.visit button:hover {
+    background: #34495e;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .highlights .cards, .gallery .images{
+        grid-template-columns: 1fr;
+    }
+}
+/* meuseum */
+:root{
+    --gold:#d4af37;
+    --dark:#070707;
+    --soft:#121212;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo', sans-serif;
+}
+
+body{
+    background:radial-gradient(circle at top, #1a1a1a, #000);
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* ===== GLOBAL ANIMATION ===== */
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* ===== HERO ===== */
+/* .hero{
+    height:90vh;
+    background:
+    linear-gradient(to bottom,rgba(0,0,0,.85),rgba(0,0,0,.9)),
+    url("img/gem-cover.jpg") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+} */
+
+.hero h1{
+    font-size:4rem;
+    color:var(--gold);
+    letter-spacing:2px;
+    animation:fadeUp 1.2s ease forwards;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:1.3rem;
+    color:#ddd;
+    animation:fadeUp 1.5s ease forwards;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:80px;
+}
+
+.section-title h2{
+    font-size:2.8rem;
+    color:var(--gold);
+}
+
+.section-title p{
+    margin-top:15px;
+    color:#bbb;
+}
+
+/* ===== ARTIFACT GRID ===== */
+.artifacts{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:40px;
+}
+
+/* ===== CARD ===== */
+.card{
+    background:linear-gradient(145deg,#111,#050505);
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+    transform-style:preserve-3d;
+    transition:.6s cubic-bezier(.25,.8,.25,1);
+    box-shadow:0 30px 60px rgba(0,0,0,.7);
+    animation:fadeUp 1s ease forwards;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(120deg,transparent,rgba(212,175,55,.15),transparent);
+    opacity:0;
+    transition:.6s;
+}
+
+.card:hover::before{
+    opacity:1;
+}
+
+.card:hover{
+    transform:rotateX(6deg) rotateY(-6deg) translateY(-15px);
+}
+
+/* make entire card clickable */
+.card{
+    cursor:pointer;
+}
+.card .details-btn{
+    display:none; /* hide button since card itself is clickable */
+}
+
+/* IMAGE */
+.card img{
+    display:block;
+    width:100%;
+    max-height:320px;
+    height:auto;
+    margin:0 auto;
+    object-fit:contain;
+    filter:grayscale(15%);
+    transition:.45s ease;
+    background:linear-gradient(180deg,#070707,#0b0b0b);
+    padding:18px;
+}
+
+.card:hover img{
+    filter:grayscale(0);
+    transform:scale(1.02);
+}
+
+/* CONTENT */
+.card-content{
+    padding:30px;
+}
+
+.card-content h3{
+    color:var(--gold);
+    margin-bottom:12px;
+    font-size:1.4rem;
+}
+
+.card-content p{
+    color:#ddd;
+    line-height:1.8;
+    font-size:.95rem;
+}
+
+.card-meta{
+    margin-top:20px;
+    display:flex;
+    justify-content:space-between;
+    font-size:.85rem;
+    color:#aaa;
+}
+
+/* ===== CTA ===== */
+.cta{
+    background:
+    linear-gradient(135deg,rgba(212,175,55,.95),rgba(140,110,25,.95)),
+    url("img/pattern.png");
+    padding:90px 10%;
+    text-align:center;
+    color:#000;
+}
+
+.cta h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.cta p{
+    font-size:1.2rem;
+    margin-bottom:35px;
+}
+
+.cta a{
+    padding:15px 45px;
+    border-radius:40px;
+    background:#000;
+    color:#fff;
+    text-decoration:none;
+    font-size:1.1rem;
+    letter-spacing:1px;
+    transition:.4s;
+}
+
+.cta a:hover{
+    background:#222;
+    transform:scale(1.08);
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:#000;
+    padding:35px;
+    text-align:center;
+    color:#777;
+    font-size:.9rem;
+}
+.picturebac{
+    background: url('../imges/footer-pic-backgrond.jpg') no-repeat center center/cover;
+    position: relative;
+    padding: 24px 0;
+}
+
+.picturebac img{
+    display:block;
+    max-width:1100px;
+    width:100%;
+    height:auto;
+    max-height:420px;
+    object-fit:cover;
+    margin:0 auto;
+    border-radius:10px;
+}
+
+/* ===== MODAL (Booking) ===== */
+.modal{
+    position:fixed;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(0,0,0,0.6);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .2s ease;
+    z-index:2200;
+}
+.modal.open{opacity:1; pointer-events:auto}
+.modal .modal-content{
+    background:#fff;
+    color:#111;
+    width:92%;
+    max-width:520px;
+    padding:22px;
+    border-radius:12px;
+    position:relative;
+    box-shadow:0 20px 60px rgba(0,0,0,.6);
+}
+.modal .close-modal{
+    position:absolute;
+    left:14px;
+    top:10px;
+    background:transparent;
+    border:0;
+    font-size:26px;
+    cursor:pointer;
+}
+.modal form label{display:block; margin:10px 0; font-size:0.95rem}
+.modal input[type="text"], .modal input[type="email"], .modal input[type="date"], .modal input[type="number"]{
+    width:100%;
+    padding:10px 12px;
+    border-radius:8px;
+    border:1px solid #ddd;
+    margin-top:6px;
+}
+.modal .btn{background:#2c3e50; color:#e67e22; padding:10px 18px; border-radius:8px; border:none; cursor:pointer}
+.modal .btn:hover{opacity:.95}
+
+/* Artifact modal specifics */
+.artifact-body{display:flex;flex-direction:column;align-items:center;gap:12px}
+.artifact-body img{width:100%;max-width:420px;height:auto;border-radius:8px;object-fit:contain}
+/* make card thumbnails rounded as well */
+.artifacts .card img{border-radius:7px;} 
+.artifact-body h3{color:var(--gold);margin:6px 0; font-size:1.4rem;}
+.artifact-body p{color:#333;text-align:right;direction:rtl; font-size:1.05rem; line-height:1.5;}
+.artifact-body .story{color:#666;font-style:italic; font-size:1rem; line-height:1.6;}
+
+/* Responsive tweaks */
+@media(max-width:1024px){
+    .section-title h2{font-size:2.4rem}
+}
+
+@media(max-width:768px){
+    .highlights .cards, .gallery .images{
+        grid-template-columns: 1fr;
+    }
+    .hero h1{font-size:2.2rem}
+    .hero p{font-size:1rem}
+    .section{padding:50px 5%}
+}
+
+@media(max-width:480px){
+    .hero h1{font-size:1.6rem}
+    .section-title h2{font-size:1.6rem}
+    .card img{padding:12px; max-height:220px}
+}

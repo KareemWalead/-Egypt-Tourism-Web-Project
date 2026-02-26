@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <title>السياحة الدينية في مصر - اكتشف سحر مصر</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="استكشف المعالم الدينية والتاريخية المقدسة في مصر - أرض الأنبياء والأديان السماوية">
+    
+    <!-- Favicon -->
+    <link href="../img/favicon.ico" rel="icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #DAA520;
+            --dark-color: #2C3E50;
+            --light-color: #F8F9FA;
+            --islamic-green: #228B22;
+            --coptic-blue: #1E90FF;
+            --jewish-gold: #FFD700;
+        }
+        
+        body {
+            font-family: 'Noto Sans Arabic', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: var(--light-color);
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'El Messiri', sans-serif;
+            font-weight: 700;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 180px 0 120px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+        
+        .hero-section p {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border: none;
+            padding: 12px 35px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #6E3510;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+        
+        .religious-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            margin-bottom: 30px;
+            background-color: white;
+        }
+        
+        .religious-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .religious-card-img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .religious-card-body {
+            padding: 25px;
+        }
+        
+        .religious-card h3 {
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .religious-card h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .religious-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .religious-tag {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .islamic-bg {
+            background-color: rgba(34, 139, 34, 0.1);
+            border-right: 4px solid var(--islamic-green);
+        }
+        
+        .coptic-bg {
+            background-color: rgba(30, 144, 255, 0.1);
+            border-right: 4px solid var(--coptic-blue);
+        }
+        
+        .jewish-bg {
+            background-color: rgba(255, 215, 0, 0.1);
+            border-right: 4px solid var(--jewish-gold);
+        }
+        
+        .feature-box {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            height: 100%;
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .feature-box h4 {
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+        
+        .destination-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            height: 350px;
+        }
+        
+        .destination-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .destination-card:hover img {
+            transform: scale(1.1);
+        }
+        
+        .destination-overlay {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 30px 20px 20px;
+        }
+        
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 3px solid var(--primary-color);
+        }
+        
+        .navbar-brand {
+            font-family: 'El Messiri', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color) !important;
+        }
+        
+        .navbar-nav .nav-link {
+            color: #333 !important;
+            font-weight: 500;
+            margin-left: 15px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .navbar-nav .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover:after,
+        .navbar-nav .nav-link.active:after {
+            width: 100%;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .navbar-nav .nav-link.active {
+            color: var(--primary-color) !important;
+            font-weight: 600;
+        }
+        
+        .content-section {
+            padding: 100px 0;
+        }
+        
+        .bg-light {
+            background-color: #f9f9f9 !important;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--secondary-color);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        .pilgrimage-timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+        
+        .timeline-item {
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+            border-right: 4px solid var(--secondary-color);
+        }
+        
+        .timeline-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            height: 100%;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            position: relative;
+            padding-right: 20px;
+        }
+        
+        .testimonial-text:before {
+            content: '"';
+            position: absolute;
+            right: 0;
+            top: -10px;
+            font-size: 3rem;
+            color: var(--secondary-color);
+            opacity: 0.3;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        .testimonial-role {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        .cta-section {
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .religious-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .religion-section {
+            padding: 80px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .religion-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 20px;
+            position: relative;
+        }
+        
+        .religion-header:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 100px;
+            height: 3px;
+        }
+        
+        .islamic-header:after {
+            background-color: var(--islamic-green);
+        }
+        
+        .coptic-header:after {
+            background-color: var(--coptic-blue);
+        }
+        
+        .jewish-header:after {
+            background-color: var(--jewish-gold);
+        }
+        
+        .footer {
+            background-color: #2C3E50;
+            color: #ddd;
+            padding: 70px 0 30px;
+        }
+        
+        .footer h5 {
+            color: white;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer h5:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            padding-right: 5px;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #3a506b;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-left: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            border-top: 1px solid #3a506b;
+            padding-top: 20px;
+            margin-top: 50px;
+            text-align: center;
+            color: #aaa;
+        }
+        
+        .prayer-times {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        
+        .prayer-times h4 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .prayer-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .prayer-item:last-child {
+            border-bottom: none;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 150px 0 80px;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content-section {
+                padding: 70px 0;
+            }
+            
+            .navbar-nav .nav-link {
+                text-align: right;
+                padding: 10px 0;
+            }
+        }
+        
+        .religious-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 10;
+            padding: 5px 15px;
+            border-radius: 20px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+        
+        .badge-islamic {
+            background-color: var(--islamic-green);
+        }
+        
+        .badge-coptic {
+            background-color: var(--coptic-blue);
+        }
+        
+        .badge-jewish {
+            background-color: var(--jewish-gold);
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-hands-praying me-2"></i>اكتشف سحر مصر
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="religious-tourism.html">السياحة الدينية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="works.html">الوجهات المقدسة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="package.html">رحلات الحج والعمرة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">عن مصر الدينية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
+                </ul>
+                <a href="booking.html" class="btn btn-primary">احجز رحلة روحانية</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>السياحة الدينية في مصر</h1>
+            <p>أرض الأنبياء ومهد الأديان السماوية. استكشف المعالم الدينية والتاريخية المقدسة التي تجمع بين الإسلام والمسيحية واليهودية في قلب الحضارة المصرية</p>
+            <a href="#destinations" class="btn btn-primary">ابدأ رحلتك الروحانية</a>
+        </div>
+    </section>
+
+    <!-- Islamic Tourism Section -->
+    <section id="islamic" class="religion-section">
+        <div class="container">
+            <div class="religion-header islamic-header">
+                <h2>السياحة الإسلامية في مصر</h2>
+                <p class="lead">مساجد تاريخية وأضرحة مقدسة ومراكز علمية إسلامية</p>
+            </div>
+            
+            <div class="row">
+                <!-- Islamic Card 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="religious-card islamic-bg">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="religious-card-img" alt="مسجد الحسين">
+                            <span class="religious-badge badge-islamic">إسلامي</span>
+                        </div>
+                        <div class="religious-card-body">
+                            <h3>مسجد الإمام الحسين</h3>
+                            <p>أحد أهم المساجد في القاهرة الإسلامية، ويضم رأس الإمام الحسين بن علي، وهو منارة للعلم والعبادة منذ القرن الثاني عشر</p>
+                            <span class="religious-tag">القاهرة التاريخية</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Islamic Card 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="religious-card islamic-bg">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="religious-card-img" alt="جامع الأزهر">
+                            <span class="religious-badge badge-islamic">إسلامي</span>
+                        </div>
+                        <div class="religious-card-body">
+                            <h3>جامع الأزهر الشريف</h3>
+                            <p>أقدم جامعة إسلامية في العالم، تأسس عام 970م، ومركز للإشعاع الثقافي والعلمي الإسلامي عبر العصور</p>
+                            <span class="religious-tag">أقدم جامعة إسلامية</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Islamic Card 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="religious-card islamic-bg">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1591608971362-f08b2a75731a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="religious-card-img" alt="مسجد عمرو بن العاص">
+                            <span class="religious-badge badge-islamic">إسلامي</span>
+                        </div>
+                        <div class="religious-card-body">
+                            <h3>مسجد عمرو بن العاص</h3>
+                            <p>أول مسجد بني في مصر وأفريقيا عام 641م، شاهد على بداية العهد الإسلامي في مصر</p>
+                            <span class="religious-tag">أول مسجد في أفريقيا</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coptic Tourism Section -->
+    <section id="coptic" class="religion-section bg-light">
+        <div class="container">
+            <div class="religion-header coptic-header">
+                <h2>السياحة القبطية في مصر</h2>
+                <p class="lead">كنائس تاريخية وأديرة ومسارات العائلة المقدسة</p>
+            </div>
+            
+            <div class="row">
+                <!-- Coptic Card 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="religious-card coptic-bg">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="religious-card-img" alt="كنيسة المعلقة">
+                            <span class="religious-badge badge-coptic">قبطي</span>
+                        </div>
+                        <div class="religious-card-body">
+                            <h3>كنيسة السيدة العذراء المعلقة</h3>
+                            <p>أشهر الكنائس القبطية في مصر، بنيت في القرن السابع على برجين من أبراج حصن بابليون الروماني</p>
+                            <span class="religious-tag">من القرن السابع</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Coptic Card 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="religious-card coptic-bg">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1590667350166-46b5d6e5d0d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="religious-card-img" alt="دير سانت كاترين">
+                            <span class="religious-badge badge-coptic">قبطي</span>
+                        </div>
+                        <div class="religious-card-body">
+                            <h3>دير سانت كاترين</h3>
+                            <p>أقدم دير مسيحي في العالم لا يزال عاملاً، يقع عند سفح جبل موسى في سيناء، ويضم مكتبة قيمة</p>
+                            <span class="religious-tag">أقدم دير في العالم</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Coptic Card 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="religious-card coptic-bg">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1506197603050-38b5d32a0c6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="religious-card-img" alt="مسار العائلة المقدسة">
+                            <span class="religious-badge badge-coptic">قبطي</span>
+                        </div>
+                        <div class="religious-card-body">
+                            <h3>مسار العائلة المقدسة</h3>
+                            <p>طريق هروب العائلة المقدسة إلى مصر، يمتد عبر 25 موقعاً، ويعد من أقدس المسارات المسيحية</p>
+                            <span class="religious-tag">مسار مقدس</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jewish Tourism Section -->
+    <section id="jewish" class="religion-section">
+        <div class="container">
+            <div class="religion-header jewish-header">
+                <h2>التراث اليهودي في مصر</h2>
+                <p class="lead">معابد تاريخية وأحياء يهودية ومواقع توراتية</p>
+            </div>
+            
+            <div class="row">
+                <!-- Jewish Card 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="religious-card jewish-bg">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1599576838125-8d59c5a0d8ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="religious-card-img" alt="معبد بن عزرا">
+                            <span class="religious-badge badge-jewish">يهودي</span>
+                        </div>
+                        <div class="religious-card-body">
+                            <h3>معبد بن عزرا</h3>
+                            <p>أقدم معبد يهودي في مصر، يقع في القاهرة القبطية، ويعتقد أن النبي موسى وجد فيه</p>
+                            <span class="religious-tag">أقدم معبد يهودي</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Jewish Card 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="religious-card jewish-bg">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1542662565-7e4b66bae529?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="religious-card-img" alt="جبل موسى">
+                            <span class="religious-badge badge-jewish">يهودي</span>
+                        </div>
+                        <div class="religious-card-body">
+                            <h3>جبل موسى</h3>
+                            <p>الجبل المقدس الذي تسلم فيه النبي موسى الوصايا العشر، يقع في جنوب سيناء</p>
+                            <span class="religious-tag">موقع توراتي</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Jewish Card 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="religious-card jewish-bg">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1516021767327-9d394a8a3e78?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="religious-card-img" alt="حي اليهود">
+                            <span class="religious-badge badge-jewish">يهودي</span>
+                        </div>
+                        <div class="religious-card-body">
+                            <h3>حي اليهود في القاهرة</h3>
+                            <p>حي تاريخي يضم العديد من المعابد والمقابر اليهودية، شاهد على الوجود اليهودي في مصر</p>
+                            <span class="religious-tag">تراث تاريخي</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">مميزات السياحة الدينية في مصر</h2>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Feature 1 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h4>تاريخ عريق</h4>
+                        <p>آلاف السنين من التراث الديني المتواصل عبر الحضارات</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h4>تعايش سلمي</h4>
+                        <p>نموذج فريد للتعايش بين الأديان السماوية</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-archway"></i>
+                        </div>
+                        <h4>معالم أثرية</h4>
+                        <p>مئات المواقع الدينية المسجلة في قائمة التراث العالمي</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <h4>مرشدون متخصصون</h4>
+                        <p>فريق من المرشدين المؤهلين في التاريخ الديني</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilgrimage Timeline -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">برنامج رحلة الحج والعمرة من مصر</h2>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="pilgrimage-timeline">
+                        <div class="timeline-item">
+                            <h4>اليوم الأول: القاهرة الإسلامية</h4>
+                            <p>زيارة مسجد الحسين، جامع الأزهر، ومسجد عمرو بن العاص. محاضرة عن تاريخ الإسلام في مصر.</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4>اليوم الثاني: القاهرة القبطية</h4>
+                            <p>جولة في حي مصر القديمة: كنيسة المعلقة، كنيسة أبي سرجة، ومعبد بن عزرا اليهودي.</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4>اليوم الثالث: رحلة إلى سيناء</h4>
+                            <p>زيارة دير سانت كاترين، صعود جبل موسى لمشاهدة شروق الشمس، وجولة في المنطقة المحيطة.</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4>اليوم الرابع: مسار العائلة المقدسة</h4>
+                            <p>بدء رحلة على خطى العائلة المقدسة، زيارة أهم المحطات في الدلتا والصعيد.</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4>اليوم الخامس: الختام والتقييم</h4>
+                            <p>لقاء ختامي، تبادل الخبرات، وتقديم شهادات المشاركة في الرحلة الروحانية.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="prayer-times">
+                        <h4>أوقات الصلاة في القاهرة</h4>
+                        <div class="prayer-item">
+                            <span>الفجر</span>
+                            <span>4:15 ص</span>
+                        </div>
+                        <div class="prayer-item">
+                            <span>الشروق</span>
+                            <span>5:45 ص</span>
+                        </div>
+                        <div class="prayer-item">
+                            <span>الظهر</span>
+                            <span>12:00 م</span>
+                        </div>
+                        <div class="prayer-item">
+                            <span>العصر</span>
+                            <span>3:15 م</span>
+                        </div>
+                        <div class="prayer-item">
+                            <span>المغرب</span>
+                            <span>6:30 م</span>
+                        </div>
+                        <div class="prayer-item">
+                            <span>العشاء</span>
+                            <span>8:00 م</span>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h4>مواعيد الرحلات</h4>
+                        <p>رحلات أسبوعية على مدار العام. رحلات خاصة في المناسبات الدينية.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">شهادات زوار</h2>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Testimonial 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "رحلة روحانية لا تُنسى. التعايش بين الأديان في مصر درس للإنسانية جمعاء"
+                        </div>
+                        <div class="testimonial-author">د. خالد أحمد</div>
+                        <div class="testimonial-role">باحث في الدراسات الدينية - السعودية</div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <

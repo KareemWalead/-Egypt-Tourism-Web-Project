@@ -1,0 +1,1273 @@
+/*** Spinner - Hidden by default ***/
+#spinner {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+
+:root {
+    --primary: #00796b;
+    --secondary: #FE8800;
+    --light: #F5F5F5;
+    --dark: #14141F;
+}
+
+/* img {
+  max-width: 100%;
+  height: auto;
+} */
+
+.dark-mode {
+  background: #121212;
+  color: white;
+    position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 10px;
+  }
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.fw-medium {
+    font-weight: 600 !important;
+}
+
+.fw-semi-bold {
+    font-weight: 700 !important;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 0px;
+}
+
+
+/*** Navbar ***/
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    margin-right: 25px;
+    padding: 35px 0;
+    color: #FFFFFF !important;
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+    transition: .5s;
+}
+
+.sticky-top.navbar-light .navbar-nav .nav-link {
+    padding: 20px 0;
+    color: #D8D6CF !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary) !important;
+}
+
+.navbar-light .navbar-brand img {
+    max-height: 60px;
+    transition: .5s;
+}
+
+.sticky-top.navbar-light .navbar-brand img {
+    max-height: 45px;
+}
+
+@media (max-width: 991.98px) {
+    .sticky-top.navbar-light {
+        position: relative;
+        background: #FFFFFF;
+    }
+
+    .navbar-light .navbar-collapse {
+        margin-top: 15px;
+        border-top: 1px solid #DDDDDD;
+    }
+
+    .navbar-light .navbar-nav .nav-link,
+    .sticky-top.navbar-light .navbar-nav .nav-link {
+        padding: 10px 0;
+        margin-left: 0;
+        color:  rgba(255, 255, 255, 0.663) !important;
+    }
+
+    .navbar-light .navbar-brand img {
+        max-height: 45px;
+    }
+}
+.navbar-light .navbar-toggler{
+    color: rgba(255, 255, 255, 0.663);
+    border-color:rgba(255, 255, 255, 0.663);
+    border-radius: 10px;
+}
+@media (min-width: 992px) {
+    .navbar-light {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid rgba(256, 256, 256, .1);
+        z-index: 999;
+    }
+    
+    .sticky-top.navbar-light {
+        position: fixed;
+        background: #1C1C1C;
+    }
+
+    .navbar-light .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 2px;
+        bottom: -1px;
+        left: 50%;
+        background: var(--primary);
+        transition: .5s;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover::before,
+    .navbar-light .navbar-nav .nav-link.active::before {
+        width: calc(100% - 2px);
+        left: 1px;
+    }
+
+    .navbar-light .navbar-nav .nav-link.nav-contact::before {
+        display: none;
+    }
+}
+
+
+/*** Hero Header ***/
+.hero-header {
+    background: url(../img/s1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-header2 {
+    background: url(../img/mohamed-alehslam.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-header3 {
+    background: url(../img/gaurav.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, .5);
+}
+
+
+/*** Section Title ***/
+.section-title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 80px);
+    height: 2px;
+    top: 4px;
+    left: -40px;
+    background: var(--primary);
+    z-index: -1;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: calc(100% + 120px);
+    height: 2px;
+    bottom: 5px;
+    left: -60px;
+    background: var(--primary);
+    z-index: -1;
+}
+
+.section-title.text-start::before {
+    width: calc(100% + 40px);
+    left: 0;
+}
+
+.section-title.text-start::after {
+    width: calc(100% + 60px);
+    left: 0;
+}
+
+
+/*** Service ***/
+.service-item {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    background-color: #242424;
+    border: 1px solid #2F2F2F;
+    border-radius: 14px;
+    color: #EDEDED;
+    transition: .5s;
+}
+
+.service-item:hover {
+    background: var(--primary);
+}
+
+.service-item * {
+    transition: .5s;
+}
+
+.service-item:hover * {
+    color: var(--light) !important;
+}
+
+
+/*** Destination ***/
+.destination img {
+    transition: .5s;
+}
+
+.destination a:hover img {
+    transform: scale(1.1);
+}
+
+
+/*** Package ***/
+.package-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+}
+
+.package-item img {
+    transition: .5s;
+}
+
+.package-item:hover img {
+    transform: scale(1.1);
+}
+
+
+/*** Booking ***/
+.booking {
+    background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url(../img/booking.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*** Team ***/
+.team-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+}
+
+.team-item img {
+    transition: .5s;
+}
+
+.team-item:hover img {
+    transform: scale(1.1);
+}
+
+.team-item .btn {
+    background: #FFFFFF;
+    color: var(--primary);
+    border-radius: 20px;
+    border-bottom: 1px solid var(--primary);
+}
+
+.team-item .btn:hover {
+    background: var(--primary);
+    color: #FFFFFF;
+}
+
+
+/*** Testimonial ***/
+.testimonial-carousel::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+.testimonial-carousel::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 200px;
+    }
+}
+
+@media (min-width: 992px) {
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 300px;
+    }
+}
+
+.testimonial-carousel .owl-item .testimonial-item,
+.testimonial-carousel .owl-item.center .testimonial-item * {
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item {
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item * {
+    color: #FFFFFF !important;
+}
+
+.testimonial-carousel .owl-dots {
+    margin-top: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #CCCCCC;
+    border-radius: 15px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+
+/*** Footer ***/
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    font-weight: normal;
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    color: var(--primary);
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: var(--light);
+}
+
+.footer .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+/* =======================================
+   Continuous Auto Slider (No gap - Infinite)
+========================================== */
+
+/* الأساسيات */
+.slider {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    background: #333232;
+    position: relative;
+}
+.slider-track {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: scroll 60s linear infinite;
+}
+
+.slider-track img {
+    height: 450px;
+    width: auto;
+    border-radius: 14px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+/* حركة السلايدر */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ▼ REsponsive ▼ */
+
+/* شاشات اللاب توب المتوسطة */
+@media (max-width: 1024px) {
+    .slider {
+        height: 380px;
+    }
+    .slider-track img {
+        height: 380px;
+    }
+}
+
+/* التابلت */
+@media (max-width: 768px) {
+    .slider {
+        height: 300px;
+    }
+    .slider-track img {
+        height: 300px;
+        gap: 15px;
+    }
+}
+
+/* الموبايل */
+@media (max-width: 480px) {
+    .slider {
+        height: 200px;
+    }
+    .slider-track {
+        gap: 10px;
+    }
+    .slider-track img {
+        height: 200px;
+        border-radius: 10px;
+    }
+}
+.cursor{
+
+    cursor: pointer;
+}
+.new-border{
+    padding: 20px;
+    border-radius: 10px;
+    border:  var(--primary) solid ;
+    width: 100%;
+    height: 100%;
+    
+    margin-top:100px
+}
+.imgee{
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.bp{
+
+    padding-top: 3rem !important;
+        width: 100%;
+    padding-right: var(--bs-gutter-x, .0rem);
+    padding-left: var(--bs-gutter-x, .0rem);
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+.my-input {
+    direction: rtl;
+    text-align: right;
+    color: white !important;
+}
+
+.form-floating > label {
+    direction: rtl;
+    text-align: right;
+    right: 0;
+    left: auto;
+    color: white;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    background: #1C1C1C;
+    scroll-behavior: smooth;
+}
+/* #1C1C1C */
+.hero {
+    height: 90vh;
+    background: url(../img/medical.jpg) center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.hero2 {
+    height: 90vh;
+    background: url(../img/contentwork.jpg) center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.hero3{
+    height: 90vh;
+    background: url(../img/bike2.jpg) center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+     background-attachment: fixed; /* السر هنا */
+}
+.hero4{
+    height: 90vh;
+    background: url(../img/rathna-deepaya.jpg) center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+     background-attachment: fixed; /* السر هنا */
+}
+.hero5{
+    height: 90vh;
+    background: url(../img/gaurav-bac.jpg) center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+     background-attachment: fixed; /* السر هنا */
+}
+.hero .overlay  .hero2 .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.634);
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    animation: fadeIn 2s ease;
+}
+
+.hero-content h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #00bfa5, #00897b);
+    color: #fff;
+    border-radius: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.btn:hover {
+    transform: scale(1.08);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    margin: 50px 0 25px;
+    color: #00796b;
+    font-weight: 800;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    width: 90%;
+    margin: auto;
+}
+
+.card {
+    background:#373737;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.15);
+}
+
+.places {
+    width: 90%;
+    margin: auto;
+}
+
+.place-card {
+    background: #fff;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 18px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.place-card:hover {
+    transform: scale(1.02);
+}
+
+.place-card img {
+    width: 280px;
+    height: 190px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.place-content h3 {
+    font-size: 26px;
+    color: #00695c;
+}
+
+.place-content p {
+    font-size: 17px;
+    margin: 10px 0;
+}
+
+.price {
+    background: #e0f2f1;
+    padding: 8px 15px;
+    border-radius: 10px;
+    width: fit-content;
+    font-size: 16px;
+    color: #004d40;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 768px) {
+    .place-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .place-card img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .place-content {
+        text-align: center;
+    }
+}
+.hamshary{
+    color: #00bfa5;
+    font-size: 20px;
+}
+.title-line {
+    width: 40%;
+    height: 4px;
+    background: linear-gradient(to right, #0d6efd, #20c997);
+    border-radius: 50px;
+    margin: 15px auto;
+}
+
+.feature-box {
+    /* background: linear-gradient(to left, #0d6efd, #20c997); */
+     background: #39a3dd;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid #0d6efd;
+    color: #000;
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* ظل ظاهر لكن خفيف */
+    
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    background-color: #f8f9fa;
+     /* background: linear-gradient(to right, #0d6efd 30% , #20c998 70%); */
+     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15); /* أكبر شويه عند hover */
+     
+}
+
+/* photo Edit */
+.container-img {
+    padding: 40px 0; /* مساحة حول الصورة */
+}
+
+.container-img {
+    display: flex;
+    justify-content: center;  /* توسيط أفقي */
+    align-items: center;      /* توسيط عمودي */
+    padding: 40px 0;
+}
+
+.image-wrapper {
+    display: inline-block;
+    max-width: 70%;        /* حجم أصغر */
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.image-wrapper img {
+    width: 100%;           /* يتناسب مع max-width */
+    height: auto;
+    display: block;
+}
+
+.image-wrapper:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* photo finish */
+/*  */
+.bg-dark {
+    background-color: #141f37fc !important
+}
+.bg-white {
+    background-color: #1C1C1C!important
+}
+
+
+.toob{
+    top: 4px;
+    left: 10px;
+}
+
+/* ----------- */
+.newsletter-form .form-control {
+    border-radius: 50px 0 0 50px;
+}
+
+.newsletter-form .btn {
+    border-radius: 0 50px 50px 0;
+    transition: 0.3s;
+}
+
+.newsletter-form .btn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+/* Back To Top Button */
+
+/* ===== Responsive ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .back-to-top {
+        width: 50px;
+        height: 50px;
+        right: 20px;
+        bottom: 20px;
+        font-size: 18px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        right: 15px;
+        bottom: 15px;
+        font-size: 16px;
+    }
+}
+/* Form wrapper */
+.search-form {
+    display: flex;
+    flex-direction: row; /* Desktop: الزرار جنب Input */
+    position: relative;
+    gap: 10px; /* مسافة بين الزرار والـ Input */
+}
+
+/* Input */
+.search-input {
+    flex: 1; /* ياخد كل المساحة المتاحة */
+    padding: 12px 20px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Button */
+.search-btn {
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: none;
+    background :linear-gradient(135deg, #00bfa5, #00897b);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ===== Responsive ===== */
+
+/* Mobile (أقل من 576px) */
+@media (max-width: 576px) {
+    .search-form {
+        flex-direction: column; /* الزرار تحت Input */
+    }
+
+    .search-btn {
+        width: 100%; /* الزرار ياخد كامل عرض Input */
+        margin-top: 10px;
+    }
+}
+/* packge page */
+
+/* Background Section */
+
+/* العنوان الصغير */
+.section-title {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #00bfa5; /* أخضر جذاب */
+    letter-spacing: 1px;
+}
+
+/* العنوان الرئيسي */
+.main-title {
+    color: #00796b; /* أخضر غامق جميل */
+}
+
+/* البطاقات */
+.process-card {
+    border-radius: 20px;
+    background: #ffffff; /* خلفية البطاقة أبيض */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.process-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+/* الدوائر Icons */
+.icon-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -50px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Gradients للأيقونات */
+.step1 { background: linear-gradient(135deg, #00bfa5, #00897b); }
+.step2 { background: linear-gradient(135deg, #26c6da, #00acc1); }
+.step3 { background: linear-gradient(135deg, #ff7043, #f4511e); }
+
+.process-card:hover .icon-circle {
+    transform: scale(1.2);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* نص البطاقة */
+.step-title {
+    color: #00796b; /* نفس لون العنوان الرئيسي */
+}
+
+.step-text {
+    color: #555; /* لون رمادي هادي للنص */
+}
+
+/* edit ahmed باقات  */
+
+/* section الباقات  */
+/* ahmed edit */
+        .booking-container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        /* background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); */
+        
+        .booking-header {
+            background: linear-gradient(135deg, #00bfa5, #00897b);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .booking-header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .package-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .package-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .package-title h2 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .package-price {
+            text-align: center;
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 18px;
+        }
+        
+        .discount-price {
+            color: #e74c3c;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        
+        .per-person {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .booking-form {
+            padding: 30px;
+        }
+        
+        .form-section {
+            margin-bottom: 30px;
+        }
+        
+        .form-section h3 {
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4facfe;
+            display: inline-block;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .form-group {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: #4facfe;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
+        }
+        
+        .form-group select.form-control {
+            cursor: pointer;
+        }
+        
+        .travelers-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .traveler-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #eee;
+        }
+        
+        .btn {
+            padding: 15px 40px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+/* ============================= */
+/* 📱 Responsive Fix Only */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    /* الكونتينر */
+    .hany {
+        padding: 20px !important;
+    }
+
+    .booking-container {
+        padding: 15px !important;
+    }
+
+    /* عنوان البوكنج */
+    .booking-header h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .booking-header p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    /* Package Info */
+    .package-details {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .package-price {
+        margin-top: 10px;
+    }
+
+    /* الفورم */
+    .form-row {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    /* الحقول */
+    input, select {
+        width: 100%;
+    }
+
+    /* الدفع */
+    #creditCardInfo .form-row {
+        flex-direction: column;
+    }
+
+    /* ملخص الحجز */
+    .summary-box {
+        padding: 20px;
+    }
+
+    .summary-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+    }
+
+    .summary-total {
+        font-size: 18px;
+    }
+
+    /* الأزرار */
+    .form-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+    }
+
+}        

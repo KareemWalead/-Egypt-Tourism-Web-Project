@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حجز الفنادق - ابحث واحجز إقامتك</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/travel-hotel.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-hotel"></i>
+                <span>حجز فندق</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="#"><i class="fas fa-search"></i> اكتشف</a></li>
+                    <li><a href="#"><i class="fas fa-heart"></i> المفضلة</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> حسابي</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Success Message -->
+    <div class="container">
+        <div id="successMessage" class="success-message">
+            <h3><i class="fas fa-check-circle"></i> تم تأكيد الحجز!</h3>
+            <p id="confirmationText">تم إكمال حجز الفندق بنجاح. تم إرسال بريد تأكيد إلى عنوان بريدك الإلكتروني.</p>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>ابحث عن إقامتك المثالية</h1>
+            <p>تصفح مجموعتنا المختارة بعناية من الفنادق الفاخرة. احجز بثقة مع ضمان أفضل سعر وسياسة إلغاء مرنة.</p>
+        </div>
+    </section>
+    
+    <!-- Hotels Section -->
+    <section class="hotels-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>فنادق مميزة</h2>
+                <p>مجموعة مختارة بعناية من الفنادق الفاخرة والمريحة</p>
+            </div>
+            
+            <div class="hotel-grid" id="hotelGrid">
+                <!-- Hotel cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Booking Modal -->
+    <div class="modal-overlay " id="bookingModal">
+        <div class="booking-modal">
+            <div class="modal-header">
+                <h3 id="modalHotelName">احجز إقامتك</h3>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="bookingForm">
+                    <div class="dates-container">
+                        <div class="form-group">
+                        <label for="guestName">الاسم الكامل</label>
+                        <input type="text" id="guestName" required placeholder="أدخل اسمك الكامل">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="guestEmail">البريد الإلكتروني</label>
+                        <input type="email" id="guestEmail" required placeholder="أدخل عنوان بريدك الإلكتروني">
+                    </div>
+                    </div>
+                    
+                    <div class="dates-container">
+                        <div class="form-group">
+                            <label for="checkIn">تاريخ الوصول</label>
+                            <input type="date" id="checkIn" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="checkOut">تاريخ المغادرة</label>
+                            <input type="date" id="checkOut" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="guests">عدد الضيوف</label>
+                        <select id="guests" required>
+                            <option value="">اختر عدد الضيوف</option>
+                            <option value="1">ضيف واحد</option>
+                            <option value="2">ضيفان</option>
+                            <option value="3">ثلاثة ضيوف</option>
+                            <option value="4">أربعة ضيوف</option>
+                            <option value="5+">خمسة ضيوف أو أكثر</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="roomType">نوع الغرفة</label>
+                        <select id="roomType" required>
+                            <option value="">اختر نوع الغرفة</option>
+                            <option value="standard">غرفة عادية</option>
+                            <option value="deluxe">غرفة ديلوكس</option>
+                            <option value="suite">سويت</option>
+                            <option value="executive">سويت تنفيذي</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-booking">
+                        <i class="fas fa-check"></i> تأكيد الحجز
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>فندق إيجاد</h4>
+                    <p>شريكك الموثوق في العثور على الإقامة المثالية لرحلاتك. نقدم أفضل مجموعة من الفنادق في جميع أنحاء العالم.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#">من نحن</a></li>
+                        <li><a href="#">الفنادق</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>اتصل بنا</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> شارع السفر 123، القاهرة، مصر</li>
+                        <li><i class="fas fa-phone"></i> +20 (100) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@hotelfinder.eg</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2023 فندق إيجاد. جميع الحقوق محفوظة. | سياسة الخصوصية | شروط الخدمة</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/travel-hotel.js"></script>
+</body>
+</html>

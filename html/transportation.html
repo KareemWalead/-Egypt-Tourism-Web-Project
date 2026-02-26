@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="اكتشف سحر السياحة في مصر، الأهرامات، المتحف المصري، الفنادق وأفضل النصائح للسفر.">
+    <meta name="keywords" content="السياحة في مصر, الأهرامات, المتحف المصري, فنادق مصر, رحلات سياحية">
+    <meta name="author" content="Kareem Walead">
+    <title>رحال - تأجير السيارات والحافلات والطائرات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/transportation.css">
+</head>
+<body>
+    <!-- الترويسة -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-road"></i>
+                <h1>رحال <span>للنقل والتأجير</span></h1>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="#booking"><i class="fas fa-calendar-check"></i> حجز جديد</a></li>
+                    <li><a href="#vehicles"><i class="fas fa-car"></i> وسائل النقل</a></li>
+                    <li><a href="#"><i class="fas fa-info-circle"></i> من نحن</a></li>
+                    <li><a href="#"><i class="fas fa-phone-alt"></i> اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- قسم الهيرو -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>رحلتك تبدأ معنا</h2>
+            <p>نوفر لك أفضل وسائل النقل من سيارات وحافلات وطائرات لتلبية جميع احتياجات سفرك وتنقلاتك بأسعار منافسة وخدمة مميزة.</p>
+        </div>
+    </section>
+    
+    <!-- قسم الحجز -->
+    <section class="booking-section" id="booking">
+        <div class="container">
+            <h2 class="section-title">احجز وسيلة النقل المناسبة</h2>
+            
+            <form id="bookingForm">
+                <div class="booking-form">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> الاسم الكامل</label>
+                        <input type="text" id="name" class="form-control" placeholder="أدخل اسمك الكامل" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone"><i class="fas fa-phone"></i> رقم الهاتف</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="أدخل رقم هاتفك" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> البريد الإلكتروني</label>
+                        <input type="email" id="email" class="form-control" placeholder="أدخل بريدك الإلكتروني" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date"><i class="fas fa-calendar-alt"></i> تاريخ الحجز</label>
+                        <input type="date" id="date" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="period"><i class="fas fa-clock"></i> مدة التأجير</label>
+                        <select id="period" class="form-control" required>
+                            <option value="" selected disabled>اختر المدة</option>
+                            <option value="يوم">يوم واحد</option>
+                            <option value="أسبوع">أسبوع</option>
+                            <option value="شهر">شهر</option>
+                            <option value="أكثر">أكثر من شهر</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="passengers"><i class="fas fa-users"></i> عدد الركاب</label>
+                        <input type="number" id="passengers" class="form-control" min="1" placeholder="عدد الركاب" required>
+                    </div>
+                </div>
+                
+                <h3 style="text-align: center; margin: 25px 0 15px; color: #1e3c72;">اختر نوع المركبة</h3>
+                
+                <div class="vehicle-options">
+                    <div class="vehicle-option active" data-type="سيارة">
+                        <i class="fas fa-car"></i>
+                        <h3>سيارة</h3>
+                        <p>من 50 جنيه/يوم</p>
+                    </div>
+                    
+                    <div class="vehicle-option" data-type="حافلة">
+                        <i class="fas fa-bus"></i>
+                        <h3>حافلة</h3>
+                        <p>من 300 جنيه/يوم</p>
+                    </div>
+                    
+                    <div class="vehicle-option" data-type="طائرة">
+                        <i class="fas fa-plane"></i>
+                        <h3>طائرة</h3>
+                        <p>من 5000 جنيه/يوم</p>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-paper-plane"></i> تأكيد الحجز
+                </button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- قسم المركبات المتاحة -->
+    <section class="vehicles-section" id="vehicles">
+        <div class="container">
+            <h2 class="section-title">وسائل النقل المتاحة</h2>
+            
+            <div class="vehicles-grid">
+                <div class="vehicle-card">
+                    <div class="vehicle-img" style="background-color: #e3f2fd;">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>سيارة سيدان فاخرة</h3>
+                        <p>سيارة مريحة ومناسبة للعائلات والأعمال، تتسع لـ 5 ركاب</p>
+                        <p class="vehicle-price">75 جنيه / يوم</p>
+                    </div>
+                </div>
+                
+                <div class="vehicle-card">
+                    <div class="vehicle-img" style="background-color: #e8f5e9;">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>سيارة دفع رباعي</h3>
+                        <p>مناسبة للطرق الوعرة والرحلات الطويلة، تتسع لـ 7 ركاب</p>
+                        <p class="vehicle-price">120 جنيه / يوم</p>
+                    </div>
+                </div>
+                
+                <div class="vehicle-card">
+                    <div class="vehicle-img" style="background-color: #fff3e0;">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>حافلة صغيرة</h3>
+                        <p>مناسبة للمجموعات الصغيرة، تتسع لـ 20 راكب</p>
+                        <p class="vehicle-price">350 جنيه / يوم</p>
+                    </div>
+                </div>
+                
+                <div class="vehicle-card">
+                    <div class="vehicle-img" style="background-color: #f3e5f5;">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>حافلة كبيرة</h3>
+                        <p>مناسبة للرحلات الجماعية، تتسع لـ 50 راكب</p>
+                        <p class="vehicle-price">600 جنيه / يوم</p>
+                    </div>
+                </div>
+                
+                <div class="vehicle-card">
+                    <div class="vehicle-img" style="background-color: #e0f2f1;">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>طائرة خاصة صغيرة</h3>
+                        <p>مناسبة للرحلات السريعة، تتسع لـ 8 ركاب</p>
+                        <p class="vehicle-price">5,500 جنيه / يوم</p>
+                    </div>
+                </div>
+                
+                <div class="vehicle-card">
+                    <div class="vehicle-img" style="background-color: #fff8e1;">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>طائرة رحلات</h3>
+                        <p>مناسبة للمجموعات الكبيرة، تتسع لـ 50 راكب</p>
+                        <p class="vehicle-price">12,000 جنيه/ يوم</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- رسالة تأكيد الحجز -->
+    <div class="confirmation-modal" id="confirmationModal">
+        <div class="confirmation-content">
+            <div class="confirmation-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            
+            <h2>تم تأكيد الحجز بنجاح!</h2>
+            <p>لقد تم تأكيد حجزك بنجاح، وسيتم إرسال رسالة تأكيد إلى هاتفك وبريدك الإلكتروني.</p>
+            
+            <div class="confirmation-details" id="confirmationDetails">
+                <!-- سيتم ملء التفاصيل هنا باستخدام JavaScript -->
+            </div>
+            
+            <button class="btn-close" id="closeModal">حسناً</button>
+        </div>
+    </div>
+    
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>رحال للنقل والتأجير</h3>
+                    <p>نوفر حلول النقل المتكاملة لتلبية احتياجاتك من خلال أسطول حديث من السيارات والحافلات والطائرات.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>روابط سريعة</h3>
+                    <a href="#">الرئيسية</a>
+                    <a href="#booking">حجز جديد</a>
+                    <a href="#vehicles">وسائل النقل</a>
+                    <a href="#">الشروط والأحكام</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>اتصل بنا</h3>
+                    <p><i class="fas fa-map-marker-alt"></i>جمهورية مصر العربيه ,القاهره</p>
+                    <p><i class="fas fa-phone"></i> 01091144753</p>
+                    <p><i class="fas fa-envelope"></i> info@rahhal.com</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>جميع الحقوق محفوظة &copy; 2023 رحال للنقل والتأجير</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- java script temple -->
+         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+    AOS.init();
+   </script>
+    <script src="../js/transportation.js" defer></script>
+</body>
+
+</html>

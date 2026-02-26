@@ -1,0 +1,170 @@
+*{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+}
+
+/* Spinner - Hidden by default */
+#spinner {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+body {
+  overflow-y: auto;
+}
+
+/* Hero Header */
+.guide-header {
+    background: linear-gradient(135deg, #00796b 0%, #00897b 100%) !important;
+}
+
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 10px;
+  }
+}
+        /* Additional styles for travel guides page */
+        .guide-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .guide-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .guide-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-bottom: 3px solid #00796b;
+        }
+        
+        .guide-info {
+            padding: 20px;
+        }
+        
+        .guide-specialties {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .specialty-badge {
+            background: #f0f7ff;
+            color: #00796b;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            border: 1px solid #00796b;
+        }
+        
+        .rating {
+            color: #FFD700;
+            font-size: 18px;
+        }
+        
+        .experience-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #00796b;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            z-index: 1;
+        }
+        
+        .language-badge {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 13px;
+            margin: 2px;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        
+        .filter-btn {
+            padding: 10px 25px;
+            border: 2px solid #00796b;
+            background: transparent;
+            color: #00796b;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: #00796b;
+            color: white;
+        }
+        
+        .guide-modal-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #00796b;
+            margin: 0 auto 20px;
+            display: block;
+        }
+        
+        .modal-arabic {
+            text-align: right;
+            direction: rtl;
+        }
+        
+        @media (max-width: 768px) {
+            .guide-img {
+                height: 250px;
+            }
+            
+            .filter-buttons {
+                gap: 5px;
+            }
+            
+            .filter-btn {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+            
+        }
